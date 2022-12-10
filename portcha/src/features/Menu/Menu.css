@@ -51,6 +51,7 @@
     right: 0;
     top: 0;
     background-color: #ffffffcc;
+    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,7 +83,7 @@
 
 .menu-window>div:hover {
     background-color: #ffffff00;
-    box-shadow: 10px 10px 5px 0px #1f1f1f;
+    box-shadow: 3px 3px 5px 0px #000000f5;
     color: rgb(0, 0, 0);
     font-weight: bold;
     border: 0.5px solid black;

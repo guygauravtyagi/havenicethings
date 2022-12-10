@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuButton from '../../small-components/Menu/MenuButton';
+import MenuButton from '../../../features/Menu/MenuButton';
 import Blue from './../../../images/Blue.png'
 import './NavBar.css';
 

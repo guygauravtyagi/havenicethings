@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import SideMenu from '../../common/small-components/Menu/SideMenu';
+import SideMenu from '../../features/Menu/SideMenu';
 import NavBar from '../../common/shared/NavBar/NavBar';
 import Fading from '../../common/small-components/background-designs/fading-ground/Fading';
 
