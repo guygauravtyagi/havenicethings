@@ -22,9 +22,19 @@
 }
 
 .heading-text>div>h1 {
-    font-size: 9rem;
+    font-size: 4rem;
     animation: scroll 200s linear 0s;
     position: absolute;
     top: 100%;
     overflow: hidden;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: -1000%;
+    }
 }

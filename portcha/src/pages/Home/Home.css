@@ -33,13 +33,3 @@
 .page-porton-two {
     background-color: #f5ecdb;
 }
-
-@keyframes scroll {
-    0% {
-        top: 100%;
-    }
-
-    100% {
-        top: -2000%;
-    }
-}

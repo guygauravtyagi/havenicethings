@@ -4,7 +4,7 @@ import './Home.css';
 import SideMenu from '../../features/Menu/SideMenu';
 import NavBar from '../../common/shared/NavBar/NavBar';
 import Fading from '../../common/small-components/background-designs/fading-ground/Fading';
-import HomeTop from '../../features/home-top/home-top';
+import HomeTop from '../../features/home-top/HomeTop';
 
 class Home extends React.Component {
 
