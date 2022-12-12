@@ -5,6 +5,7 @@ import SideMenu from '../../features/Menu/SideMenu';
 import NavBar from '../../common/shared/NavBar/NavBar';
 import Fading from '../../common/small-components/background-designs/fading-ground/Fading';
 import HomeTop from '../../features/home-top/HomeTop';
+import Carousel from '../../features/carousel/Carousel';
 
 class Home extends React.Component {
 
@@ -27,8 +28,7 @@ class Home extends React.Component {
       <NavBar toggleMenu={this.decideMenu.bind(this)}></NavBar>
       <HomeTop></HomeTop>
       <div id='potion-two' className='page-porton-two'>
-        <h1>Kabadi</h1>
-        <a href='#potion-one'>go up</a>
+        <Carousel></Carousel>
       </div>
       <SideMenu isClosed={this.state.menuClose}></SideMenu>
     </div>;
