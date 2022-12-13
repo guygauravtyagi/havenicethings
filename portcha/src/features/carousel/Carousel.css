@@ -4,11 +4,16 @@
     position: absolute;
     left: 50%;
     transform: translate(var(--carousel-move-percent), 50%);
+    animation-duration: 1200ms;
+    animation-fill-mode: forwards;
+    cursor: crosshair;
 }
 
 .carousel-container>.image {
     width: 40vmin;
     height: 56vmin;
     object-fit: cover;
-    object-position: center;
+    object-position: var(--image-move-percent) 50%;
+    animation-duration: 1200ms;
+    animation-fill-mode: forwards;
 }
