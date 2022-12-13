@@ -2,9 +2,7 @@
     border: 1px solid black;
     width: 100vw;
     height: 100vh;
-    background-image: url("./back-top.jpg");
     background-color: black;
-    background: linear-gradient(to top, #00000094, rgba(0, 0, 0, 100)),url(back-top.jpg);
     background-size: cover;
     z-index: -2;
     position: absolute;
