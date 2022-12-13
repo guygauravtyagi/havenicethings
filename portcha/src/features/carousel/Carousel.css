@@ -13,9 +13,7 @@
     width: 40vmin;
     height: 56vmin;
     object-fit: cover;
-    object-position: var(--image-move-percent) 100%;
-    animation-duration: 1200ms;
-    animation-fill-mode: forwards;
+    object-position: var(--image-move-percent) 50%;
     filter: blur(.6px);
     -webkit-filter: blur(.6px);
     opacity: .95;
@@ -25,4 +23,11 @@
     filter: blur(0);
     -webkit-filter: blur(0);
     opacity: 1;
+}
+
+.stuff {
+    width: 100vmin;
+    height: 100vmin;
+    z-index: -1;
+    transform: 100ms;
 }

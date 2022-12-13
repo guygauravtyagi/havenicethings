@@ -15,7 +15,7 @@ function Carousel(props) {
             document.documentElement.style.setProperty('--carousel-mouse-x', '0');
             prevPercent = precent;
         });
-        
+
         window.addEventListener('mousedown', e => {
             e.preventDefault();
             document.documentElement.style.setProperty('--carousel-mouse-x', e.clientX);
@@ -29,20 +29,20 @@ function Carousel(props) {
             if (precent > 0) precent = 0;
             else if (precent < -100) precent = -100;
             document.documentElement.style.setProperty('--carousel-move-percent', precent + '%');
-            document.documentElement.style.setProperty('--image-move-percent', Math.floor(precent + 100) + '%');
             carouselElement.animate({
                 transform: `translate(${precent}%, 50%)`
             }, { duration: 1200, fill: "forwards" });
-            
-            for(const image of carouselElement.getElementsByClassName("image")) {
+
+            for (const image of carouselElement.getElementsByClassName("image")) {
                 image.animate({
-                objectPosition: `${100 + precent}% center`
+                    objectPosition: `${100 + precent}% center`
                 }, { duration: 1200, fill: "forwards" });
             }
         })
     }, []);
-    
+
     return <div id='carousel-id' className='carousel-container'>
+        <img className='image' alt='this is interesting' src={require('../../images/image-10.jpg')} draggable={false}></img>
         <img className='image' alt='this is interesting' src={require('../../images/image-1.jpg')} draggable={false}></img>
         <img className='image' alt='this is interesting' src={require('../../images/image-2.jpg')} draggable={false}></img>
         <img className='image' alt='this is interesting' src={require('../../images/image-3.jpg')} draggable={false}></img>

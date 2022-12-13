@@ -23,10 +23,12 @@
 
 .heading-text>div>h1 {
     font-size: 4rem;
-    animation: scroll 200s linear 0s;
+    animation: scroll 60s linear 0s;
     position: absolute;
     top: 100%;
     overflow: hidden;
+    cursor: default;
+    pointer-events: none;
 }
 
 @keyframes scroll {
@@ -35,6 +37,6 @@
     }
 
     100% {
-        top: -1000%;
+        top: -250%;
     }
 }
