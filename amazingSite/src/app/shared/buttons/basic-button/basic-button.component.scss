@@ -1,1 +1,26 @@
 @import './../../theme.scss';
+
+.basic-button {
+    padding: .5rem;
+    background-color: #00000000;
+    border: 0;
+}
+.basic {
+    color: $text-dark-00;
+}
+
+.primary {
+    color: $primary-color;
+}
+
+.secondary {
+    color: $secondary-color;
+}
+
+.warn {
+    color: $warn-color;
+}
+
+.disabled {
+    color: $text-dark-09;
+}
