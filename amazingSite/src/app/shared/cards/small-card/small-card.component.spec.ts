@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SolidButtonComponent } from './solid-button.component';
+import { SmallCardComponent } from './small-card.component';
 
-describe('SolidButtonComponent', () => {
-  let component: SolidButtonComponent;
-  let fixture: ComponentFixture<SolidButtonComponent>;
+describe('SmallCardComponent', () => {
+  let component: SmallCardComponent;
+  let fixture: ComponentFixture<SmallCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SolidButtonComponent ]
+      declarations: [ SmallCardComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SolidButtonComponent);
+    fixture = TestBed.createComponent(SmallCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

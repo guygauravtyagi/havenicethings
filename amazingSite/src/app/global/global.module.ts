@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { GlobalSheetComponent } from './global-sheet/global-sheet.component';
-import { ButtonsModule } from '../shared';
+import { ButtonsModule, CardsModule } from '../shared';
 
 
 @NgModule({
@@ -14,7 +14,8 @@ import { ButtonsModule } from '../shared';
   ],
   imports: [
     CommonModule,
-    ButtonsModule
+    ButtonsModule,
+    CardsModule,
   ],
   exports: [
     NavBarComponent,
