@@ -8,7 +8,7 @@ import { ButtonComponent } from './button/button.component';
     ButtonComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     ButtonComponent

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./small-card.component.scss']
 })
 export class SmallCardComponent {
-
+  okButton = 'Ok';
+  closeButton = 'Cancel';
+  description = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, incidunt dolor dolorum architecto vitae ratione perspiciatis totam modi, perferendis ipsam assumenda ducimus iure sit nemo beatae nisi temporibus. Error, eos.'
 }

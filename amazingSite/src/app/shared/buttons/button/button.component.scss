@@ -4,9 +4,8 @@
     background-color: #00000000;
     border: 0;
     padding: .5rem;
-    &.basic {
-        color: $text-dark-03;
-    }
+    font-size: 1rem;
+    color: $text-dark-03;
     &.primary {
         color: $primary-color;
     }
