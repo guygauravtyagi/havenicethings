@@ -1,0 +1,16 @@
+@import './../../theme.scss';
+
+.toaster-small {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $text-dark-15;
+    box-shadow: 6px 6px 16px 1px $text-dark-09;
+    z-index: 999999;
+    border-radius: 8px;
+    p {
+        margin: 0;
+    }
+}
