@@ -1,0 +1,17 @@
+<div class="select-box-container">
+    <div class="search-box">
+        <input type="text" (keyup)="searchItem($event)" />
+        <app-button [category]="'icon'"></app-button>
+    </div>
+    <ul *ngIf="showDropDown">
+        <li>
+            This is bad
+        </li>
+        <li>
+            This is worse
+        </li>
+        <li>
+            This is worst
+        </li>
+    </ul>
+</div>

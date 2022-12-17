@@ -1,0 +1,60 @@
+@import './../../../shared/theme.scss';
+
+.search-box {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    input {
+        width: 100%;
+        height: 30px;
+        border-radius: 10px;
+        border: 0;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 30px;
+        font-size: 16px;
+        outline: none;
+        box-shadow: inset 1px 1px 5px 0px $text-dark-09;
+        z-index: inherit;
+    }
+
+    app-button {
+        margin-left: -30px;
+        margin-top: 3px;
+        z-index: inherit;
+    }
+}
+
+.select-box-container {
+    position: relative;
+
+    ul {
+        position: absolute;
+        display: block;
+        width: calc(100% - 27px);
+        border: 1px solid $text-dark-12;
+        padding: 15px;
+        padding-bottom: 0;
+        list-style-type: none;
+        background-color: $basic-color;
+        margin-top: -20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        z-index: 1;
+        transition: all .5s ease-in-out;
+        li {
+            font-size: 16px;
+            padding: 10px;
+            border-bottom: 1px solid $text-dark-12;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+}

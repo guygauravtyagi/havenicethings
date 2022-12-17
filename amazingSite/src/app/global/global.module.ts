@@ -4,6 +4,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { GlobalSheetComponent } from './global-sheet/global-sheet.component';
 import { ButtonsModule, CardsModule, ToastsModule } from '../shared';
+import { SearchModule } from '../features';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ButtonsModule, CardsModule, ToastsModule } from '../shared';
   ],
   imports: [
     CommonModule,
+    SearchModule,
     ButtonsModule,
     CardsModule,
     ToastsModule,

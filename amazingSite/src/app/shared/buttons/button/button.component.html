@@ -1,3 +1,4 @@
-<button type="button" ngClass="{{category | lowercase}}" (click)="onButtonClick($event)">
+<button type="button" ngClass="{{category | lowercase}}" (click)="onButtonClick($event)">    
     {{buttonName}}
+    <mat-icon *ngIf="showIcon">search</mat-icon>
 </button>

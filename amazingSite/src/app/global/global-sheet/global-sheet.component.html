@@ -2,6 +2,17 @@
     <app-small-card></app-small-card>
 </div>
 <div>
-    <app-button (buttonClicked)="toggleToast()" ></app-button>
+    <app-button [category]="'outline-button'" (buttonClicked)="toggleToast()"></app-button>
+    <app-button [category]="'outline-button primary'" (buttonClicked)="toggleToast()"></app-button>
+    <app-button [category]="'outline-button secondary'" (buttonClicked)="toggleToast()"></app-button>
+    <app-button [category]="'outline-button warn'" (buttonClicked)="toggleToast()"></app-button>
+    <app-button [category]="'outline-button disabled'" (buttonClicked)="toggleToast()"></app-button>
+</div>
+<div>
+    <app-button [category]="'main-button'" (buttonClicked)="toggleToast()"></app-button>
+    <app-button [category]="'main-button primary'" (buttonClicked)="toggleToast()"></app-button>
+    <app-button [category]="'main-button secondary'" (buttonClicked)="toggleToast()"></app-button>
+    <app-button [category]="'main-button warn'" (buttonClicked)="toggleToast()"></app-button>
+    <app-button [category]="'main-button disabled'" (buttonClicked)="toggleToast()"></app-button>
     <app-small-toast [isOpen]="openToast"></app-small-toast>
 </div>
