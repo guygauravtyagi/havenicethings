@@ -3,6 +3,9 @@
 .toaster-small {
     width: 200px;
     height: 60px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
     display: flex;
     justify-content: center;
     align-items: center;

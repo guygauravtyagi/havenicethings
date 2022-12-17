@@ -2,5 +2,6 @@
     <app-small-card></app-small-card>
 </div>
 <div>
-    <app-small-toast></app-small-toast>
+    <app-button (buttonClicked)="toggleToast()" ></app-button>
+    <app-small-toast [isOpen]="openToast"></app-small-toast>
 </div>

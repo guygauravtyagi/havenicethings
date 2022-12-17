@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./global-sheet.component.scss']
 })
 export class GlobalSheetComponent {
+  openToast = false;
 
+
+  toggleToast() {
+    this.openToast = !this.openToast;
+  }
 }
