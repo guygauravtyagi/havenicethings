@@ -17,6 +17,16 @@ tree.right.right = new TreeLeaf(7);
 tree.left.left.left = new TreeLeaf(8);
 tree.left.left.right = new TreeLeaf(9);
 
+tree2 = new TreeLeaf(11);
+tree2.left = new TreeLeaf(12);
+tree2.right = new TreeLeaf(13);
+tree2.left.left = new TreeLeaf(14);
+tree2.left.right = new TreeLeaf(15);
+tree2.right.left = new TreeLeaf(16);
+tree2.right.right = new TreeLeaf(17);
+tree2.left.left.left = new TreeLeaf(18);
+tree2.left.left.right = new TreeLeaf(19);
+
 inorder = function (parentLeaf) {
     if (!parentLeaf) return;
     inorder(parentLeaf.left);
@@ -41,3 +51,4 @@ postorder = function (parentLeaf) {
 // postorder(tree);
 
 exports.tree = tree;
+exports.tree2 = tree2;
