@@ -7,7 +7,7 @@ class TreeLeaf {
     }
 }
 
-let tree = new TreeLeaf(1);
+tree = new TreeLeaf(1);
 tree.left = new TreeLeaf(2);
 tree.right = new TreeLeaf(3);
 tree.left.left = new TreeLeaf(4);
@@ -38,4 +38,6 @@ postorder = function (parentLeaf) {
     console.log(parentLeaf.value);
 }
 
-postorder(tree);
+// postorder(tree);
+
+exports.tree = tree;
