@@ -27,28 +27,32 @@ tree2.right.right = new TreeLeaf(17);
 tree2.left.left.left = new TreeLeaf(18);
 tree2.left.left.right = new TreeLeaf(19);
 
-inorder = function (parentLeaf) {
-    if (!parentLeaf) return;
-    inorder(parentLeaf.left);
-    console.log(parentLeaf.value);
-    inorder(parentLeaf.right);
+
+treeTraversal = {
+    inorder: function (parentLeaf) {
+        if (!parentLeaf) return;
+        this.inorder(parentLeaf.left);
+        console.log(parentLeaf.value);
+        this.inorder(parentLeaf.right);
+    },
+    preorder: function (parentLeaf) {
+        if (!parentLeaf) return;
+        console.log(parentLeaf.value);
+        this.preorder(parentLeaf.left);
+        this.preorder(parentLeaf.right);
+    },
+    postorder: function (parentLeaf) {
+        if (!parentLeaf) return;
+        this.postorder(parentLeaf.left);
+        this.postorder(parentLeaf.right);
+        console.log(parentLeaf.value);
+    }
 }
 
-preorder = function (parentLeaf) {
-    if (!parentLeaf) return;
-    console.log(parentLeaf.value);
-    preorder(parentLeaf.left);
-    preorder(parentLeaf.right);
-}
 
-postorder = function (parentLeaf) {
-    if (!parentLeaf) return;
-    postorder(parentLeaf.left);
-    postorder(parentLeaf.right);
-    console.log(parentLeaf.value);
-}
 
 // postorder(tree);
 
 exports.tree = tree;
 exports.tree2 = tree2;
+exports.treeTraversal = treeTraversal;
