@@ -4,12 +4,10 @@
  * 
  */
 
-const { tree3, treeTraversal } = require('./../day1_18_dec_2022/TreeTraversal');
+const { tree, treeTraversal } = require('./../day1_18_dec_2022/TreeTraversal');
 
 isSum = function (node) {
     if (!node) return true;
-    isSum(node.left);
-    isSum(node.right);
     if (isSum(node.left) && isSum(node.right)
     && !(node.left && node.right)
     || node.value === getSum(node)) return true;
@@ -22,4 +20,4 @@ getSum = function (node) {
     if(node.right && !node.left) return node.right.value;
 }
 
-console.log(isSum(tree3));
+console.log(isSum(tree));

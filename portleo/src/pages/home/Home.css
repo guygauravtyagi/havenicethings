@@ -1,6 +1,5 @@
 .home-container {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background-color: var(--background-color);
+    position: absolute;
+    width: 200%;
+    height: 200%;
 }

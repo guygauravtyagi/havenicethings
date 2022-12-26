@@ -1,0 +1,7 @@
+@import url('./../../Theme.css');
+
+.card-container {
+    background-color: var(--var-not-darkgreen);
+    position: relative;
+    border-radius: 30px;
+}

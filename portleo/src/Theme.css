@@ -1,0 +1,27 @@
+:root {
+    --var-black-00: #000;
+    --var-black-01: #111;
+    --var-black-02: #222;
+    --var-black-03: #333;
+    --var-black-04: #444;
+    --var-black-05: #555;
+    --var-black-06: #666;
+    --var-black-07: #777;
+    --var-black-08: #888;
+    --var-black-09: #999;
+    --var-black-10: #aaa;
+    --var-black-11: #bbb;
+    --var-black-12: #ccc;
+    --var-black-13: #ddd;
+    --var-black-14: #eee;
+    --var-black-15: #fff;
+    --var-not-yellow: #fbf8cc;
+    --var-not-orange: #fde4cf;
+    --var-not-pink: #ffcfd2;
+    --var-not-purple: #f1c0e8;
+    --var-not-violet: #cfbaf0;
+    --var-not-blue: #a3c4f3;
+    --var-not-skyblue: #8eecf5;
+    --var-not-darkgreen: #98f5e1;
+    --var-not-green: #b9fbc0;
+}

@@ -70,6 +70,22 @@ tree3.left.left = new TreeLeaf(3);
 tree3.left.right = new TreeLeaf(5);
 tree3.right.left = new TreeLeaf(2);
 
+/**
+ * 
+ *                       4
+ *                     /   \
+ *                    2     5
+ *                   / \    
+ *                  1   3  
+ * 
+ */
+
+tree4 = new TreeLeaf(4);
+tree4.left = new TreeLeaf(2);
+tree4.right = new TreeLeaf(5);
+tree4.left.left = new TreeLeaf(1);
+tree4.left.right = new TreeLeaf(3);
+
 
 treeTraversal = {
     inorder: function (parentLeaf) {
@@ -99,4 +115,5 @@ treeTraversal = {
 exports.tree = tree;
 exports.tree2 = tree2;
 exports.tree3 = tree3;
+exports.tree4 = tree4;
 exports.treeTraversal = treeTraversal;

@@ -1,9 +1,12 @@
 import './App.css';
-import Cheatsheet from './global/CheatSheet/CheatSheet';
+import Home from './pages/home/Home';
 
 function App() {
   return (
-    <Cheatsheet></Cheatsheet>
+    <div className='page' >
+      <h1>Hey! There</h1>
+      <Home></Home>
+    </div>
   );
 }
 
