@@ -2,6 +2,23 @@
 
 .card-container {
     background-color: var(--var-not-darkgreen);
-    position: relative;
+    position: absolute;
     border-radius: 30px;
+}
+
+.card-container>img {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 1000ms;
+}
+
+.card-container:hover {
+    transform: scale(1.05);
+    transition: 1000ms;
+}
+
+.card-container:hover img{
+    opacity: 1;
 }
