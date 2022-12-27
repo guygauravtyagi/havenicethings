@@ -3,14 +3,25 @@
 .card-container {
     background-color: var(--var-not-darkgreen);
     position: absolute;
-    border-radius: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px 0px var(--var-black-05);
 }
 
 .card-container>img {
     height: 100%;
     width: 100%;
     border-radius: inherit;
+    object-fit: cover;
     opacity: 0;
+    transition: 1000ms;
+}
+
+.card-container>h2 {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    text-align: center;
+    color: var(--var-black-01);
     transition: 1000ms;
 }
 
@@ -19,6 +30,11 @@
     transition: 1000ms;
 }
 
-.card-container:hover img{
+.card-container:hover img {
     opacity: 1;
+}
+
+.card-container:hover h2 {
+    top: 45%;
+    color: var(--var-black-14);
 }
