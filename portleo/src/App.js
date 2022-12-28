@@ -1,13 +1,22 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from './pages/home/Home';
+import Blog from './pages/blogs/Blog';
+import About from './pages/about/About';
+import Contact from './pages/contact/Contact';
 
 function App() {
   return (
-    <div className='page' >
-      <h1>Forest's mother use to say:</h1>
-      <h2>Website is box of chocolate, you don't know where you will land.</h2>
-      <Home></Home>
-    </div>
+    <BrowserRouter>
+      <Routes>
+          <Route path="home" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="blogs" element={<Blog />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

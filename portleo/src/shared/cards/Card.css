@@ -4,10 +4,10 @@
     background-color: var(--var-not-darkgreen);
     position: absolute;
     border-radius: 10px;
-    box-shadow: 1px 1px 4px 0px var(--var-black-05);
+    box-shadow: 1px 1px 4px 0px var(--var-black-04);
 }
 
-.card-container>img {
+.card-container>a>img {
     height: 100%;
     width: 100%;
     border-radius: inherit;
@@ -16,18 +16,25 @@
     transition: 1000ms;
 }
 
-.card-container>h2 {
+a {
+    color: inherit;
+    border-radius: inherit;
+}
+
+.card-container>a>h2 {
     position: absolute;
     width: 100%;
-    top: 10%;
+    font-size: 2.5rem;
+    top: 0%;
     text-align: center;
-    color: var(--var-black-01);
-    transition: 1000ms;
+    transition: 2000ms;
+    opacity: 0;
 }
 
 .card-container:hover {
     transform: scale(1.05);
     transition: 1000ms;
+    box-shadow: 2px 2px 8px 0px var(--var-black-04);
 }
 
 .card-container:hover img {
@@ -36,5 +43,6 @@
 
 .card-container:hover h2 {
     top: 45%;
-    color: var(--var-black-14);
+    color: var(--var-black-15);
+    opacity: 1;
 }
