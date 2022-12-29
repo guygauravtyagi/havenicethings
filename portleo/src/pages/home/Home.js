@@ -6,6 +6,15 @@ import Card from '../../shared/cards/Card';
 function Home(props) {
 
     const dots = [];
+    let angle = 0;
+    const p1 = {
+        x: 0,
+        y: 0
+    },
+        p2 = {
+            x: 0,
+            y: 0
+        }
     let mouse = {
         x: 0,
         y: 0
@@ -14,6 +23,11 @@ function Home(props) {
     React.useEffect(() => {
         document.body.onmousemove = function (ev) {
             const homeScreen = document.getElementById('home-space');
+            p1.x = ev.pageX;
+            p1.y = ev.pageY;
+            angle = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 360 / Math.PI;
+            p2.x = p1.x;
+            p2.y = p1.y;
             if (!homeScreen) return;
             mouse.x = (ev.clientX / window.innerWidth) * (homeScreen.offsetWidth);
             mouse.y = (ev.clientY / window.innerHeight) * (homeScreen.offsetHeight);
@@ -28,10 +42,10 @@ function Home(props) {
                 easing: "ease"
             });
         }
-            for (var i = 0; i < 12; i++) {
-                var d = new Dot(document.getElementById('home-space'));
-                dots.push(d);
-            }
+        for (var i = 0; i < 3; i++) {
+            var d = new Dot(document.getElementById('home-space'));
+            dots.push(d);
+        }
     }, []);
 
     function animate() {
@@ -44,7 +58,7 @@ function Home(props) {
         this.x = 0;
         this.y = 0;
         this.node = (function () {
-            var n = document.createElement("div");
+            var n = document.createElement("img");
             n.className = "trail";
             ele.appendChild(n);
             return n;
@@ -53,17 +67,18 @@ function Home(props) {
     Dot.prototype.draw = function () {
         this.node.style.left = this.x + "px";
         this.node.style.top = this.y + "px";
+        this.node.style.transform = `rotate(${angle}deg)`;
     };
     function draw(mouse) {
-        var x = mouse.x,
-            y = mouse.y;
+        let x = mouse.x,
+            y = mouse.y;        
         dots.forEach(function (dot, index, dots) {
-            var nextDot = dots[index + 1] || dots[0];
+            let nextDot = dots[index + 1] || dots[0];
             dot.x = x;
             dot.y = y;
             dot.draw();
-            x += (nextDot.x - dot.x) * .5;
-            y += (nextDot.y - dot.y) * .5;
+            x += (nextDot.x - dot.x) * .8;
+            y += (nextDot.y - dot.y) * .8;
         });
     }
 

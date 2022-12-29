@@ -6,7 +6,9 @@
 
 .trail {
     position: absolute;
-    height: 6px;
-    width: 6px;
+    content: url("./../../assests/images/foot.png");
+    height: 16px;
+    width: 16px;
+    object-fit: cover;
     border-radius: 3px;
 }
