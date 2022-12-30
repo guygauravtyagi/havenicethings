@@ -1,0 +1,84 @@
+.about-card-holder {
+    height: 44vmin;
+    width: 60vmin;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vmin;
+    padding: 2vmin;
+    border-radius: 10px;
+    background-color: #ffffff80;
+    box-shadow: 2px 2px 10px 2px gray;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.about-card-holder:hover {
+    height: 44vmin;
+    width: 60vmin;
+    display: flex;
+    color: #fff;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vmin;
+    padding: 2vmin;
+    border-radius: 10px;
+    background-color: #ffffff80;
+    box-shadow: 2px 2px 10px 2px gray;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.about-card-holder>img {
+    height: 40vmin;
+    width: 40vmin;
+    border-radius: 20vmin;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.about-card-holder:hover>img {
+    height: 30vmin;
+    width: 30vmin;
+    border-radius: 15vmin;
+    object-fit: cover;
+    transition: 2s;
+}
+
+.about-card-holder>div {
+    width: 50vmin;
+    text-align: center;
+    opacity: .6;
+    transition: .5s;
+}
+
+.about-card-holder:hover>div {
+    width: 30vmin;
+    text-align: left;
+    opacity: 1;
+}
+
+.about-card-holder>div>h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.about-card-holder>div>h2>span {
+    font-size: .9rem;
+    font-style: italic;
+}
+
+.about-card-holder>div>div {
+    padding: 1.5rem;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.about-card-holder>div>div>label {
+    font-size: .9rem;
+    font-weight: normal;
+    font-style: italic;
+}

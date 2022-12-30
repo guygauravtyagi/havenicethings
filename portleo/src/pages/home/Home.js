@@ -4,33 +4,11 @@ import './Home.css'
 import Card from '../../shared/cards/Card';
 
 function Home(props) {
-
-    const dots = [];
-    let angle = 0;
-    const p1 = {
-        x: 0,
-        y: 0
-    },
-        p2 = {
-            x: 0,
-            y: 0
-        }
-    let mouse = {
-        x: 0,
-        y: 0
-    };
-
     React.useEffect(() => {
+        document.body.style.overflow = 'hidden';
         document.body.onmousemove = function (ev) {
             const homeScreen = document.getElementById('home-space');
-            p1.x = ev.pageX;
-            p1.y = ev.pageY;
-            angle = Math.atan2(p2.y - p1.y, p2.x - p1.x) * 360 / Math.PI;
-            p2.x = p1.x;
-            p2.y = p1.y;
             if (!homeScreen) return;
-            mouse.x = (ev.clientX / window.innerWidth) * (homeScreen.offsetWidth);
-            mouse.y = (ev.clientY / window.innerHeight) * (homeScreen.offsetHeight);
             const xMov = (ev.clientX / window.innerWidth) * (homeScreen.offsetWidth - window.innerWidth) * -1,
                 yMov = (ev.clientY / window.innerHeight) * (homeScreen.offsetHeight - window.innerHeight) * -1;
             homeScreen.style.transform = `translate(${xMov}px, ${yMov}px)`;
@@ -42,45 +20,7 @@ function Home(props) {
                 easing: "ease"
             });
         }
-        for (var i = 0; i < 3; i++) {
-            var d = new Dot(document.getElementById('home-space'));
-            dots.push(d);
-        }
     }, []);
-
-    function animate() {
-        draw(mouse);
-        requestAnimationFrame(animate);
-    }
-    animate();
-
-    var Dot = function (ele) {
-        this.x = 0;
-        this.y = 0;
-        this.node = (function () {
-            var n = document.createElement("img");
-            n.className = "trail";
-            ele.appendChild(n);
-            return n;
-        }());
-    };
-    Dot.prototype.draw = function () {
-        this.node.style.left = this.x + "px";
-        this.node.style.top = this.y + "px";
-        this.node.style.transform = `rotate(${angle}deg)`;
-    };
-    function draw(mouse) {
-        let x = mouse.x,
-            y = mouse.y;        
-        dots.forEach(function (dot, index, dots) {
-            let nextDot = dots[index + 1] || dots[0];
-            dot.x = x;
-            dot.y = y;
-            dot.draw();
-            x += (nextDot.x - dot.x) * .8;
-            y += (nextDot.y - dot.y) * .8;
-        });
-    }
 
     return (
         <div id='home-space' className='home-container'>
