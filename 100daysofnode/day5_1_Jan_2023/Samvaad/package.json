@@ -1,0 +1,16 @@
+{
+  "name": "samvaad",
+  "version": "1.0.0",
+  "description": "Ghost chat app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "start": "node index.js"
+  },
+  "author": "Gaurav Tyagi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.5.4"
+  }
+}
