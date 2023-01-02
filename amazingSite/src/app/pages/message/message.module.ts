@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 /**
- * Services
+ * Services Module
  */
 import { CommsModule } from './../../services/comms/comms.module';
 
@@ -11,6 +11,7 @@ import { CommsModule } from './../../services/comms/comms.module';
  * Internal Components
  */
 import { MessageComponent } from './message/message.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -26,6 +27,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     CommsModule,
+    FormsModule,
     RouterModule.forChild(routes),
   ]
 })

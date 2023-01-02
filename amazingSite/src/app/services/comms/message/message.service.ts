@@ -1,18 +1,34 @@
 import { Injectable } from '@angular/core';
+import { QueueingSubject } from 'queueing-subject';
+import { Observable, Subscription } from 'rxjs'
+import { share, switchMap } from 'rxjs/operators'
+import makeWebSocketObservable, {
+  GetWebSocketResponses,
+} from 'rxjs-websockets'
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
 
-  private webSocket!: WebSocket;
+  public input$ = new QueueingSubject<string>();
+  public webSocket$ = makeWebSocketObservable('ws://localhost:3000');
+  public messages$: Observable<any> = this.webSocket$.pipe(
+    // the observable produces a value once the websocket has been opened
+    switchMap((getResponses: GetWebSocketResponses) => {
+      console.log('websocket opened')
+      return getResponses(<any>this.input$)
+    }),
+    share(),
+  )
 
   constructor() {
-    this.webSocket = new WebSocket('ws://localhost:3000', 'echo-protocol');
+    
   }
-
-  mikeCheck() {
-    console.log('Hey There');
-    this.webSocket.onopen
+  
+  public sendMessage(message: string) {
+    this.input$.next(JSON.stringify({
+      data: message
+    }))
   }
 }
