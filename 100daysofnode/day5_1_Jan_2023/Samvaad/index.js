@@ -1,39 +1,19 @@
-const express = require('express');
+const { Server } = require('ws');
 
-const app = express();
-var port = process.env.PORT || 3000;
-
-app.get('/', (req, res) => {
-    res.send(`<!DOCTYPE html>
-
-    <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
-        <script src="/chat.js"></script>
-    </head>
-    
-    <body>
-        <h1 class="room-message"></h1>
-        <div class="window">
-            <div class="chat-message">
-                <div id="output"></div>
-                <div id="feedback"></div>
-            </div>
-            <div class='fields'>
-                <input type="text" id="message" placeholder="Enter message">
-                <button id="send">Send</button>
-            </div>
-        </div>
-        <div class="online">
-            <p class="users-online">Users Online</p>
-            <div class="users">
-            </div>
-        </div>
-        <script src="/chat.js"></script>
-    </body>
-    
-    </html>`)
-})
-
-const server = app.listen(port, () => {
-    console.log(`Server Running on port ${port}`)
-})
+const sockserver = new Server({ port: 3000 });
+const connections = new Set();
+sockserver.on('connection', (ws) => {
+    console.log('New client connected!');
+    console.log(ws);
+    connections.add(ws)
+    ws.on('message', (data) => {
+        const message = JSON.parse(data);
+        connections.forEach((client) => {
+            client.send(JSON.stringify(message));
+        })
+    });
+    ws.on('close', () => {
+        connections.delete(ws);
+        console.log('Client has disconnected!');
+    });
+});
