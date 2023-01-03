@@ -14,7 +14,6 @@ export class MessageService {
   public input$ = new QueueingSubject<string>();
   public webSocket$ = makeWebSocketObservable('ws://localhost:3000');
   public messages$: Observable<any> = this.webSocket$.pipe(
-    // the observable produces a value once the websocket has been opened
     switchMap((getResponses: GetWebSocketResponses) => {
       console.log('websocket opened')
       return getResponses(<any>this.input$)
@@ -22,9 +21,7 @@ export class MessageService {
     share(),
   )
 
-  constructor() {
-    
-  }
+  constructor() { }
   
   public sendMessage(message: string) {
     this.input$.next(JSON.stringify({

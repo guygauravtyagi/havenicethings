@@ -22,8 +22,6 @@ export class MessageComponent implements OnInit {
     this.messageService.messages$.subscribe(
       (data) => {
         this.messageList.push(JSON.parse(data).data);
-      }, (err) => {
-        console.log(err);
       }
     )
   }
