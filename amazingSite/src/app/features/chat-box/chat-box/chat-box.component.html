@@ -1,0 +1,11 @@
+<div class="main-container">
+    <div *ngIf="messagList && messagList.length > 0" >
+        <app-chat-bubbles *ngFor="let message of messagList" ></app-chat-bubbles>
+    </div>
+    <div *ngIf="!messagList || messagList.length === 0" >
+        <p>Let's chat</p>
+    </div>
+    <div>
+        <textarea rows="2"> </textarea>
+    </div>
+</div>

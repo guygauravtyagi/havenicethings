@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 /**
  * Services Module
  */
 import { CommsModule } from './../../services/comms/comms.module';
+import { ChatBoxModule } from 'src/app/features/chat-box/chat-box.module';
 
 /**
  * Internal Components
  */
 import { MessageComponent } from './message/message.component';
-import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
     CommsModule,
     FormsModule,
     RouterModule.forChild(routes),
+    ChatBoxModule,
   ]
 })
 export class MessageModule { }
