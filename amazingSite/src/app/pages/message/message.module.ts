@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
  * Services Module
  */
 import { CommsModule } from './../../services/comms/comms.module';
-import { ChatBoxModule } from 'src/app/features/chat-box/chat-box.module';
+import { ChatBoxModule, ChatListModule } from 'src/app/features';
 
 /**
  * Internal Components
@@ -31,6 +31,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forChild(routes),
     ChatBoxModule,
+    ChatListModule,
   ]
 })
 export class MessageModule { }

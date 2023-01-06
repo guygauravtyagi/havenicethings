@@ -1,5 +1,5 @@
 .main-container {
-    height: 85vh;
+    height: 100%;
     width: 50vw;
     border-radius: 10px;
     box-shadow: inset 2px 2px 10px 2px black;
@@ -8,9 +8,10 @@
     flex-direction: column;
     justify-content: space-between;
     textarea {
-        width: calc(50vw - 5vh);
+        width: calc(50vw - 6vh);
         padding: 2.5vh;
         outline: none;
+        resize: none;
     }
 }
 

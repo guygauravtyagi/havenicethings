@@ -1,14 +1,8 @@
-<div>
+<div class="main-container">
     <div>
-        <app-chat-box></app-chat-box>
-        <div *ngIf="messageList.length > 0">
-            <div *ngFor="let item of messageList">
-                <p> {{item}}</p>
-            </div>
-        </div>
+        <app-chat-list></app-chat-list>
     </div>
     <div>
-        <input type="text" [(ngModel)]="message" />
-        <input type="button" value="Send" (click)="sendMessage($event)" />
+        <app-chat-box></app-chat-box>
     </div>
 </div>
