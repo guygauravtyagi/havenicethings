@@ -1,17 +1,32 @@
 .main-container {
     height: 100%;
-    width: 50vw;
+    width: 100%;
     border-radius: 10px;
-    box-shadow: inset 2px 2px 10px 2px black;
+    box-shadow: inset 0px 0px 10px 1px black;
     padding: 2.5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    textarea {
-        width: calc(50vw - 6vh);
-        padding: 2.5vh;
-        outline: none;
-        resize: none;
+    .type-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        textarea {
+            width: calc(100% - 6vh);
+            padding: 1.5vh;
+            padding-right: calc(1.5vh + 50px);
+            font-size: 1rem;
+            outline: none;
+            resize: none;
+            overflow-x: hidden;
+            word-wrap: break-word;
+        }
+        img {
+            height: 40px;
+            width: 40px;
+            margin-left: -50px;
+        }
     }
 }
 
