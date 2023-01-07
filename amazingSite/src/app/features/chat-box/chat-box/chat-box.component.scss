@@ -13,7 +13,7 @@
         justify-content: center;
         align-items: center;
         textarea {
-            width: calc(100% - 6vh);
+            width: calc(100% - 10vh);
             padding: 1.5vh;
             padding-right: calc(1.5vh + 50px);
             font-size: 1rem;
@@ -21,6 +21,9 @@
             resize: none;
             overflow-x: hidden;
             word-wrap: break-word;
+            border-radius: 4px;
+            border: 0;
+            box-shadow: inset 0px 0px 4px 1px black;
         }
         img {
             height: 40px;
