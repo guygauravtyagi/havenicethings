@@ -13,6 +13,10 @@ const routes: Routes = [{
   loadChildren: () => import('./pages/message/message.module').then(m => m.MessageModule),
   canActivate: [() => true]
 }, {
+  path: 'login',
+  loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule),
+  canActivate: [() => true]
+}, {
   path: '**',
   redirectTo: 'profile',
   pathMatch: 'full'
