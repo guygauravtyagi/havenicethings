@@ -1,5 +1,8 @@
 <div class="main-container">
     <app-input-field></app-input-field>
     <app-input-field></app-input-field>
-    <app-button [buttonName] = "'Login'"></app-button>
+    <div>
+        <app-button [buttonName] = "'Sign In'" [category]="'main-button primary'"></app-button>
+        <app-button [buttonName] = "'Sign Up'" [category]="'main-button secondary'"></app-button>
+    </div>
 </div>
