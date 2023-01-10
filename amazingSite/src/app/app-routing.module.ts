@@ -1,24 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [{
   path: 'profile',
-  loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule)
+  loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule),
+  canActivate: [LoginGuard],
 }, {
   path: 'home',
   loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
-  canActivate: [() => true]
+  canActivate: [LoginGuard],
 }, {
   path: 'message',
   loadChildren: () => import('./pages/message/message.module').then(m => m.MessageModule),
-  canActivate: [() => true]
+  canActivate: [LoginGuard],
 }, {
   path: 'login',
   loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule),
-  canActivate: [() => true]
 }, {
   path: '**',
-  redirectTo: 'profile',
+  redirectTo: 'login',
   pathMatch: 'full'
 }];
 
