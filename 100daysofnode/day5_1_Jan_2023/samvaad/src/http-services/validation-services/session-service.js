@@ -3,11 +3,10 @@ const jwt = require('jsonwebtoken');
 sessionService = function (username, expireAt) {
     this.username = username;
     this.expireAt = expireAt;
-
-    this.isExpired = function () {
+    this.isExpired = () => {
         return this.expireAt < new Date();
     }
-    this.getToken = function () {
+    this.getToken = () => {
         let token = '';
         try {
             token = jwt.sign({

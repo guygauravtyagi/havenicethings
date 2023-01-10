@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { BackEndService } from 'src/app/services/api-interaction/back-end/back-end.service';
 
 
@@ -12,7 +14,10 @@ export class LoginComponent {
   public usernameField = '';
   public passwordField = '';
 
-  constructor(private backEndService: BackEndService) {}
+  constructor(
+    private backEndService: BackEndService,
+    private router: Router
+  ) { }
 
   public usernameUpdated(event: Event) {
     this.usernameField = (<HTMLInputElement>event.target).value;
@@ -27,7 +32,12 @@ export class LoginComponent {
       username: this.usernameField,
       password: this.passwordField
     }).subscribe(
-      (data) => console.log(data)
+      (data) => {
+        if (data.status === 'success') {
+          sessionStorage.setItem('USER_DATA', JSON.stringify(data));
+          this.router.navigate(['/profile']);
+        }
+      }
     )
   }
 
