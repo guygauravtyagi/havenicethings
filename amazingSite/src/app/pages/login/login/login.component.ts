@@ -9,6 +9,26 @@ import { BackEndService } from 'src/app/services/api-interaction/back-end/back-e
 })
 export class LoginComponent {
 
+  public usernameField = '';
+  public passwordField = '';
+
   constructor(private backEndService: BackEndService) {}
+
+  public usernameUpdated(event: Event) {
+    this.usernameField = (<HTMLInputElement>event.target).value;
+  }
+
+  public passwordUpdated(event: Event) {
+    this.passwordField = (<HTMLInputElement>event.target).value;
+  }
+
+  public signIn() {
+    this.backEndService.login({
+      username: this.usernameField,
+      password: this.passwordField
+    }).subscribe(
+      (data) => console.log(data)
+    )
+  }
 
 }

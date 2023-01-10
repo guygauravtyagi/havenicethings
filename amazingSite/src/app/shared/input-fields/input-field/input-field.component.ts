@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input-field',
@@ -8,4 +8,10 @@ import { Component, Input } from '@angular/core';
 export class InputFieldComponent {
   @Input()fieldType = 'text';
   @Input()placeHolder = 'text';
+  @Input() fieldValue = '';
+  @Output() fieldChange: EventEmitter<Event> = new EventEmitter<Event>;
+
+  public updateField(event: Event) {
+    this.fieldChange.emit(event);
+  }
 }

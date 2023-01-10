@@ -1,8 +1,8 @@
 <div class="main-container">
-    <app-input-field [placeHolder]="'username'"></app-input-field>
-    <app-input-field [fieldType]="'password'" [placeHolder]="'password'"></app-input-field>
+    <app-input-field [placeHolder]="'username'" (fieldChange)="usernameUpdated($event)"></app-input-field>
+    <app-input-field [fieldType]="'password'" [placeHolder]="'password'" (fieldChange)="passwordUpdated($event)"></app-input-field>
     <div>
-        <app-button [buttonName] = "'Sign In'" [category]="'main-button primary'"></app-button>
-        <app-button [buttonName] = "'Sign Up'" [category]="'main-button secondary'"></app-button>
+        <app-button [buttonName] = "'Sign In'" [category]="'main-button primary'" (buttonClicked)="signIn()"></app-button>
+        <app-button [buttonName] = "'Sign Up'" [category]="'main-button secondary'" (buttonClicked)="signIn()"></app-button>
     </div>
 </div>
