@@ -9,7 +9,8 @@ validateLoginDetails = (data) => {
         respose = {
             status: 'success',
             code: '200',
-            token: session.getToken()
+            token: session.getSessionToken(),
+            refreshToken: session.refreshToken()
         }
     }
     return respose;

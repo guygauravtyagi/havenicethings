@@ -14,4 +14,8 @@ export class BackEndService {
   login(payload: LoginDetails): Observable<any> {
     return this.http.post('http://localhost:3000/login', payload);
   }
+
+  getSessionToken(payload: any) {
+    return this.http.post('http://localhost:3000/login', payload);
+  }
 }

@@ -1,10 +1,11 @@
 'use strict';
 
-let WSServer = require('ws').Server;
-let server = require('http').createServer();
-let app = require('./http-services/http-server');
+const WSServer = require('ws').Server;
+const server = require('http').createServer();
+const app = require('./http-services/http-server');
+const config = require('./meta-data/config');
 
-let wss = new WSServer({
+const wss = new WSServer({
     server: server
 });
 server.on('request', app);
@@ -24,6 +25,6 @@ wss.on('connection', function connection(ws) {
     });
 });
 
-server.listen(process.env.PORT, function () {
-    console.log(`http/ws server listening on ${process.env.PORT}`);
+server.listen(config.PORT, function () {
+    console.log(`http/ws server listening on ${config.PORT}`);
 });
