@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProfileComponent } from './profile/profile.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PublicPostsModule } from 'src/app/features';
+import { ProfileDescModule } from 'src/app/features/profile-desc/profile-desc.module';
 
 const routes: Routes = [
   {
@@ -18,7 +19,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    PublicPostsModule
+    PublicPostsModule,
+    ProfileDescModule
   ]
 })
 export class ProfileModule { }
