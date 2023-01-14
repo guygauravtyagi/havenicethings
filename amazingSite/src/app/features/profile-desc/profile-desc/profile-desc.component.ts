@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ProfileDescComponent {
 
+  public isFollowing = true;
+
+  toggleFollow() {
+    this.isFollowing = !this.isFollowing;
+  }
 }

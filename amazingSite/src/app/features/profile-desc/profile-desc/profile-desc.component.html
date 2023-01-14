@@ -1,4 +1,4 @@
-<div class="main-container">
+<div class="main-container" [ngClass]="isFollowing ? 'blue-marker' : 'gray-marker'">
     <app-profile-image></app-profile-image>
     <div class="prfoile-description">
         <div>
@@ -12,5 +12,9 @@
         <div>
 
         </div>
+    </div>
+    <div class="follow-button">
+        <app-button *ngIf="isFollowing" [category]="'icon'" [iconName]="'bookmarks'" (buttonClicked)="toggleFollow()"></app-button>
+        <app-button *ngIf="!isFollowing" [category]="'icon'" [iconName]="'bookmark'" (buttonClicked)="toggleFollow()"></app-button>
     </div>
 </div>

@@ -7,17 +7,20 @@
     align-items: center;
     gap: 10vh;
     box-shadow: 1px 1px 10px 1px #c9c9c9;
+    position: relative;
     .prfoile-description {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         gap: 5vh;
+
         div {
             h2 {
                 font-size: 1.6rem;
             }
         }
+
         .main-holder {
             display: flex;
             flex-direction: row;
@@ -25,4 +28,25 @@
             gap: 5vh;
         }
     }
+}
+
+.gray-marker {
+    background: rgb(180, 180, 180);
+    background: linear-gradient(225deg, rgb(180, 180, 180) 0%, rgb(224, 224, 224) 7.5%, rgb(255, 255, 255) 15%, rgba(255, 255, 255, 1) 100%);
+}
+
+.blue-marker {
+    background: rgb(136, 208, 255);
+    background: linear-gradient(225deg, rgb(136, 208, 255) 0%, rgb(218, 240, 255) 7.5%, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 100%);
+}
+
+.follow-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

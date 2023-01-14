@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ButtonComponent implements OnInit{
   @Input() buttonName = '';
   @Input() category = 'Basic';
+  @Input() iconName = 'search';
   showIcon = true;
 
   @Output() buttonClicked: EventEmitter<Event> = new EventEmitter<Event>();
