@@ -4,8 +4,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 5vh;
-    div {
+    padding-top: 2.5vh;
+    .profile-details {
         width: 60%;
+    }
+    .post-container {
+        width: 56%;
+        padding: 2%;
     }
 }

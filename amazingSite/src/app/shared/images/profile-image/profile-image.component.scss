@@ -1,9 +1,12 @@
 .main-container {
     height: 40vim;
     width: 36vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
-        height: 39vmin;
-        width: 35vmin;
+        height: 40vmin;
+        width: 36vmin;
         object-fit: cover;
     }
 }
