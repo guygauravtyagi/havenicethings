@@ -1,4 +1,4 @@
 <button type="button" ngClass="{{category | lowercase}}" (click)="onButtonClick($event)">    
     {{buttonName}}
-    <mat-icon *ngIf="showIcon">{{iconName}}</mat-icon>
+    <mat-icon [ngClass]="iconSize" [ngStyle]="{'color': iconColor}" *ngIf="showIcon">{{iconName}}</mat-icon>
 </button>

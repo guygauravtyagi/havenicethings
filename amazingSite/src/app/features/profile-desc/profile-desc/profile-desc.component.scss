@@ -12,12 +12,11 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
-        gap: 5vh;
-
+        gap: 2vh;
+        padding-right: 10vh;
         div {
             h2 {
-                font-size: 1.6rem;
+                font-size: 2rem;
             }
         }
 
@@ -49,4 +48,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.message-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-holder {
+    font-size: 0.9rem;
+    padding-top: 6vh;
 }

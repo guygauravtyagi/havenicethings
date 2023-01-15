@@ -5,16 +5,19 @@
             <h2>Princess Victoria</h2>
         </div>
         <div class="main-holder">
-            <app-button [category]="'text-button'" [buttonName]="'posts : '"></app-button>
-            <app-button [category]="'text-button'" [buttonName]="'followers : '"></app-button>
-            <app-button [category]="'text-button'" [buttonName]="'follows : '"></app-button>
+            <app-button [category]="'main-button'" [buttonName]="'posts : 1000'"></app-button>
+            <app-button [category]="'main-button'" [buttonName]="'followers : 1000'"></app-button>
+            <app-button [category]="'main-button'" [buttonName]="'follows : 1000'"></app-button>
         </div>
-        <div>
-
+        <div class="status-holder">
+            <p>This is a basic status that can be toggled, we are very understandable here so we are going to make this a big status line so that we can check word wrap as well...</p>
         </div>
     </div>
     <div class="follow-button">
-        <app-button *ngIf="isFollowing" [category]="'icon'" [iconName]="'bookmarks'" (buttonClicked)="toggleFollow()"></app-button>
-        <app-button *ngIf="!isFollowing" [category]="'icon'" [iconName]="'bookmark'" (buttonClicked)="toggleFollow()"></app-button>
+        <app-button *ngIf="isFollowing" [iconColor]="'white'" [iconSize]="'large'" [category]="'icon'" [iconName]="'bookmarks'" (buttonClicked)="toggleFollow()"></app-button>
+        <app-button *ngIf="!isFollowing" [iconColor]="'#5abdff'" [iconSize]="'large'" [category]="'icon'" [iconName]="'bookmark'" (buttonClicked)="toggleFollow()"></app-button>
+    </div>
+    <div class="message-button">
+        <app-button [category]="'icon'" [iconColor]="'brown'" [iconSize]="'large'" [iconName]="'message'"></app-button>
     </div>
 </div>

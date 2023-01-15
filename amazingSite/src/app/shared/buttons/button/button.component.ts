@@ -9,6 +9,8 @@ export class ButtonComponent implements OnInit{
   @Input() buttonName = '';
   @Input() category = 'Basic';
   @Input() iconName = 'search';
+  @Input() iconSize = 'medium';
+  @Input() iconColor = 'black';
   showIcon = true;
 
   @Output() buttonClicked: EventEmitter<Event> = new EventEmitter<Event>();
