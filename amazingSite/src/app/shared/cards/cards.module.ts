@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { SmallCardComponent } from './small-card/small-card.component';
 import { ButtonsModule } from '../buttons/buttons.module';
 import { ConnectionChipsComponent } from './connection-chips/connection-chips.component';
+import { RoundCardsComponent } from './round-cards/round-cards.component';
 
 
 
 @NgModule({
   declarations: [
     SmallCardComponent,
-    ConnectionChipsComponent
+    ConnectionChipsComponent,
+    RoundCardsComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { ConnectionChipsComponent } from './connection-chips/connection-chips.co
   ],
   exports: [
     SmallCardComponent,
-    ConnectionChipsComponent
+    ConnectionChipsComponent,
+    RoundCardsComponent
   ]
 })
 export class CardsModule { }

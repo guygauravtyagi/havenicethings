@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfileComponent } from './profile/profile.component';
 import { RouterModule, Routes } from '@angular/router';
-import { PublicPostsModule } from 'src/app/features';
+import { ActiveModule, PublicPostsModule } from 'src/app/features';
 import { ProfileDescModule } from 'src/app/features/profile-desc/profile-desc.module';
+import { ButtonsModule } from 'src/app/shared';
 
 const routes: Routes = [
   {
@@ -20,7 +21,9 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     PublicPostsModule,
-    ProfileDescModule
+    ProfileDescModule,
+    ActiveModule,
+    ButtonsModule
   ]
 })
 export class ProfileModule { }

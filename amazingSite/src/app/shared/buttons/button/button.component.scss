@@ -1,5 +1,9 @@
 @import './../../theme.scss';
 
+button {
+    cursor: pointer;
+}
+
 .text-button {
     background-color: #00000000;
     border: 0;
@@ -17,6 +21,9 @@
     }
     &.disabled {
         color: $text-dark-09;
+    }
+    &.underline {
+        text-decoration:underline;
     }
 }
 .main-button {

@@ -6,11 +6,10 @@
     align-items: center;
     padding-top: 2.5vh;
     gap: 2.5vh;
-    .profile-details {
+    div{
         width: 60vw;
     }
     .post-container {
-        width: 60vw;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

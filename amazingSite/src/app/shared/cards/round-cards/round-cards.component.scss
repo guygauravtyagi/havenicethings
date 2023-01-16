@@ -1,0 +1,14 @@
+.main-container {
+    height: 6vw;
+    width: 6vw;
+    border-radius: 3vw;
+    border: 1px solid black;
+    padding: 3px;
+    box-shadow: 1px 1px 4px 2px gray;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+    }
+}

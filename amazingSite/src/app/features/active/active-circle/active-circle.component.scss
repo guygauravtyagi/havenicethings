@@ -1,0 +1,15 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    width: 96%;
+    overflow-x: scroll;
+    gap: 2.5%;
+    padding: 4px 2% 4px 2%;
+    .card-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+}

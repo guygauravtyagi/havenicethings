@@ -31,6 +31,12 @@
         margin-top: -45px;
         width: 80%;
         bottom: 0px;
-        background-color: #00000066;
+        background-color: #00000022;
+        filter: blur(2px);
+        transition: 500ms;
+        &:hover{
+            filter: blur(0);
+            background-color: #00000066;
+        }
     }
 }

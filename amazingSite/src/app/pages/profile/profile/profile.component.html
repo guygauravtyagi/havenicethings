@@ -2,6 +2,13 @@
     <div class="profile-details">
         <app-profile-desc></app-profile-desc>
     </div>
+    <div class="friends-pop">
+        <div>
+            <app-button [category]="'text-button underline primary'" [buttonName]="'status'"></app-button>
+            <app-button [category]="'text-button underline'" [buttonName]="'trending'"></app-button>
+        </div>
+        <app-active-circle></app-active-circle>
+    </div>
     <div class="post-container">
         <div class="post-holder">
             <app-image-post [imageSrc]="'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80'"></app-image-post>
