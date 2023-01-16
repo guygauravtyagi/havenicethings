@@ -1,7 +1,9 @@
 <div class="main-container">
-    <img src="https://images.unsplash.com/photo-1530041539828-114de669390e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80">
-    <div>
-        <app-button [iconColor]="'blue'" [iconSize]="'large'" [category]="'icon'" [iconName]="'thumb_up'"></app-button>
-        <app-button [iconColor]="'blue'" [iconSize]="'large'" [category]="'icon'" [iconName]="'thumb_down'"></app-button>
+    <img [src]="imageSrc">
+    <div class="button-holder">
+        <app-button [iconColor]="'white'" [iconSize]="'medium'" [category]="'icon'" [iconName]="'thumb_up'"></app-button>
+        <app-button [iconColor]="'white'" [iconSize]="'medium'" [category]="'icon'" [iconName]="'thumb_down'"></app-button>
+        <app-button [iconColor]="'white'" [iconSize]="'medium'" [category]="'icon'" [iconName]="'chat'"></app-button>
+        <app-button [iconColor]="'white'" [iconSize]="'medium'" [category]="'icon'" [iconName]="'arrow_circle_up'"></app-button>
     </div>
 </div>
