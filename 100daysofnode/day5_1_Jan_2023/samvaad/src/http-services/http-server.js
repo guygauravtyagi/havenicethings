@@ -2,6 +2,8 @@
 
 const fs = require('fs');
 const express = require('express');
+const MongoClient = require('mongodb').MongoClient;
+const config = require('./../meta-data/config');
 const app = express();
 
 app.use(function (req, res, next) {
@@ -15,6 +17,13 @@ app.use(function (req, res, next) {
         next();
     }
 });
+
+MongoClient.connect(config.mongoUri).then(
+    (data) => console.log('mongo connected')
+).catch(
+    err => console.log(err)
+)
+
 app.use(express.json());
 
 app.get('/', function (req, res) {
