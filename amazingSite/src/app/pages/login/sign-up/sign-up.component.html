@@ -1,0 +1,38 @@
+<div class="main-container">
+    <form [formGroup]="signUpForm">
+        <div>
+            <app-input-field [placeHolder]="'username'"
+                [addClass]="signUpForm.controls.userName.dirty && signUpForm.controls.userName.errors ? 'error' : 'success'"
+                [inputControl]="signUpForm.controls.userName"></app-input-field>
+            <p class="error">*{{signUpForm.controls.userName.dirty}}</p>
+        </div>
+        <div>
+            <app-input-field [placeHolder]="'First Name'"
+            [addClass]="signUpForm.controls.firstName.dirty && signUpForm.controls.firstName.errors ? 'error' : 'success'"
+                [inputControl]="signUpForm.controls.firstName"></app-input-field>
+            <p class="error" *ngIf="signUpForm.controls.firstName.dirty">*</p>
+        </div>
+        <div>
+            <app-input-field [placeHolder]="'Last Name'"
+            [addClass]="signUpForm.controls.lastName.dirty && signUpForm.controls.lastName.errors ? 'error' : 'success'"
+                [inputControl]="signUpForm.controls.lastName"></app-input-field>
+            <p class="error" *ngIf="signUpForm.controls.lastName.dirty">*</p>
+        </div>
+        <div>
+            <app-input-field [fieldType]="'password'" [placeHolder]="'password'"
+            [addClass]="signUpForm.controls.password.dirty && signUpForm.controls.password.errors ? 'error' : 'success'"
+                [inputControl]="signUpForm.controls.password"></app-input-field>
+            <p class="error" *ngIf="signUpForm.controls.password.dirty">*</p>
+        </div>
+        <div>
+            <app-input-field [placeHolder]="'confirm password'"
+            [addClass]="signUpForm.controls.confirmPassword.dirty && signUpForm.controls.confirmPassword.errors ? 'error' : 'success'"
+                [inputControl]="signUpForm.controls.confirmPassword"></app-input-field>
+            <p class="error" *ngIf="signUpForm.controls.confirmPassword.dirty">*</p>
+        </div>
+    </form>
+    <div>
+        <app-button [buttonName]="'Confirm'" [category]="'main-button secondary'"
+            (buttonClicked)="confirm()"></app-button>
+    </div>
+</div>

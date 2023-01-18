@@ -2,18 +2,18 @@ input {
     padding: 2vh;
     width: 25vw;
     border: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     outline: none;
-    box-shadow: inset 0px 0px 4px 0px gray;
+    box-shadow: inset 0px 0px 6px 0px gray;
     font-size: 1rem;
 }
 
 .error {
-    box-shadow: inset 0px 0px 4px 0px red;
-    border-bottom: 1px solid red;
+    box-shadow: inset 0px 0px 6px 0px red;
+    border-bottom: 2px solid red;
 }
 
 .success {
-    box-shadow: inset 0px 0px 4px 0px green;
-    border-bottom: 1px solid green;
+    box-shadow: inset 0px 0px 6px 0px green;
+    border-bottom: 2px solid green;
 }

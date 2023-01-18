@@ -6,11 +6,17 @@ import { InputFieldsModule } from 'src/app/shared';
 
 import { LoginComponent } from './login/login.component';
 import { ButtonsModule } from 'src/app/shared';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
     path: '',
     component: LoginComponent
+  },
+  {
+    path: 'signUp',
+    component: SignUpComponent
   }
 ];
 
@@ -18,11 +24,13 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    LoginComponent
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    ReactiveFormsModule,
     InputFieldsModule,
     ButtonsModule
   ]

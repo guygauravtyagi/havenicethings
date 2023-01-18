@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 import { BackEndService } from 'src/app/services/api-interaction/back-end/back-end.service';
 
 
@@ -38,6 +39,12 @@ export class LoginComponent {
           this.router.navigate(['/profile']);
         }
       }
+    )
+  }
+
+  public signUp() {
+    this.router.navigate(['login/signUp']).then(
+      data =>  console.log(data)
     )
   }
 

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InputFieldComponent } from './input-field/input-field.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -9,9 +10,10 @@ import { InputFieldComponent } from './input-field/input-field.component';
     InputFieldComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ], exports: [
-    InputFieldComponent
+    InputFieldComponent,
   ]
 })
 export class InputFieldsModule { }

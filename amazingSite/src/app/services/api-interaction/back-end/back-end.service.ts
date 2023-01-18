@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import LoginDetails from 'src/app/meta-data/interfaces/UserDetails';
+import * as DataModel from 'src/app/meta-data/interfaces/UserDetails';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,8 +11,12 @@ export class BackEndService {
 
   constructor(private http: HttpClient) { }
 
-  login(payload: LoginDetails): Observable<any> {
+  login(payload: DataModel.LoginDetails): Observable<any> {
     return this.http.post('http://localhost:3000/login', payload);
+  }
+
+  signUp(payload: DataModel.SignUpDetails) {
+    return this.http.post('http://localhost:3000/signUp', payload);
   }
 
   getSessionToken(payload: any) {

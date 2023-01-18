@@ -1,1 +1,1 @@
-<input [type]="fieldType" [placeholder]="placeHolder" (change)="updateField($event)">
+<input [type]="fieldType" [ngClass]="addClass" [placeholder]="placeHolder" (change)="updateField($event)" [formControl]="inputControl">
