@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "",
-    "start": "PORT=3000 nodemon src/index.js"
+    "start": "PORT=3000 nodemon src/index.js",
+    "collection:user": "node src/config/mongo/createUser.js"
   },
   "author": "Gaurav Tyagi",
   "license": "ISC",

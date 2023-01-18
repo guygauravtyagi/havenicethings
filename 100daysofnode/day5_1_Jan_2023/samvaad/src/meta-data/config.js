@@ -10,6 +10,6 @@ module.exports = {
         refreshSecret: 'G57LjWLaAlFcWZ8wUzJs',
         validity: '2400h'
     },
-    mongoClient: '',
-    mongoUri: 'mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.1'
+    mongoUri: `mongodb://admin:badkal@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.1`,
+    db_dev: 'samvaad_dev'
 }

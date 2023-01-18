@@ -16,9 +16,17 @@ validateLoginDetails = (data) => {
     return respose;
 }
 
-module.exports = function (app) {
+module.exports = function (app, dbClient) {
     app.post('/login', function (req, res) {
         console.log(validateLoginDetails(req.body));
+        res.json(validateLoginDetails(req.body));
+    });
+}
+
+module.exports = function (app, dbClient) {
+    app.post('/signUp', function (req, res) {
+        console.log(validateLoginDetails(req.body));
+        console.log(dbClient);
         res.json(validateLoginDetails(req.body));
     });
 }
