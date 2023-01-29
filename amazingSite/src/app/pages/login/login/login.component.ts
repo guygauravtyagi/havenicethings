@@ -30,7 +30,7 @@ export class LoginComponent {
 
   public signIn() {
     this.backEndService.login({
-      username: this.usernameField,
+      userName: this.usernameField,
       password: this.passwordField
     }).subscribe(
       (data) => {

@@ -6,7 +6,6 @@ const MongoClient = require('mongodb').MongoClient;
 const config = require('./../meta-data/config');
 
 const app = express();
-const dbClient = MongoClient.connect(config.mongoUri);
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -26,6 +25,7 @@ app.get('/', function (req, res) {
     res.send('hello');
 });
 
-require('./validation-services/lgoin-journey')(app, dbClient);
+require('./login-signup-journey/lgoin')(app);
+require('./login-signup-journey/sign-up')(app);
 
 module.exports = app;

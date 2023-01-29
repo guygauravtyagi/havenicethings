@@ -1,32 +1,8 @@
-const sessionService = require('./session-service');
 const mongodb = require('mongodb');
-const config = require('./../../meta-data/config');
-const user = require('./../../config/mongo/data-models-db/userModel').user;
+const config = require('../../meta-data/config');
+const user = require('../../config/mongo/data-models-db/userModel').user;
 
-validateLoginDetails = (data) => {
-    var tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    const session = new sessionService(data.username, tomorrow);
-    let respose = {};
-    if (true) {
-        respose = {
-            status: 'success',
-            code: '200',
-            token: session.getSessionToken(),
-            refreshToken: session.refreshToken()
-        }
-    }
-    return respose;
-}
-
-module.exports = function (app, dbClient) {
-    app.post('/login', function (req, res) {
-        console.log(validateLoginDetails(req.body));
-        res.json(validateLoginDetails(req.body));
-    });
-}
-
-module.exports = function (app, dbClient) {
+module.exports = function (app) {
     app.post('/signUp', function (req, res) {
         let userObj = user // JSON.parse(JSON.stringify(user));
         userObj.id = new mongodb.ObjectId(0);
