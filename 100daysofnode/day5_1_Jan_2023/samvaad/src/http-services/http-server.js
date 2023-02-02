@@ -27,5 +27,6 @@ app.get('/', function (req, res) {
 
 require('./login-signup-journey/lgoin')(app);
 require('./login-signup-journey/sign-up')(app);
+require('./search-services/stringSearch')(app);
 
 module.exports = app;
