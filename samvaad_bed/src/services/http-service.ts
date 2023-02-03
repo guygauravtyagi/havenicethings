@@ -3,10 +3,17 @@ import express from 'express';
 
 export class HttpService {
     public app!: express.Application;
-    constructor() {
+    public static httpService: HttpService;
+    private constructor() {
         this.app = express();
         this.setDefaultHeaders(this.app);
         this.setDefaultMetaData(this.app);
+    }
+
+    static getInstance() {
+        if (!this.httpService)
+            this.httpService = new HttpService();
+        return this.httpService;
     }
 
     setDefaultHeaders(app: express.Application) {
