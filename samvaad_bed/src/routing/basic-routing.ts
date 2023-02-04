@@ -1,21 +1,18 @@
-import express, { Router } from 'express';
-import { LoginController } from './../controllers/loginControler';
+import express from 'express';
+import { LoginController } from '../controllers/loginController';
 
 export class BasicRouting {
 
-    private router: Router;
+    private app: express.Application
     private loginController: LoginController = new LoginController()
 
-    constructor() {
-        this.router = express.Router();
-    }
-
-    getRouting () {
-        return this.router;
+    constructor(app: express.Application) {
+        this.app = app;
+        this.setRouting();
     }
 
     setRouting() {
-        this.router.get('/login', this.loginController.controll);
+        this.app.get('/login', this.loginController.controll);
     }
 
 }

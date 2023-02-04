@@ -9,8 +9,7 @@ export class HttpService {
 
     private constructor() {
         this.app = express();
-        this.routing = new BasicRouting();
-        this.addRouting(this.app);
+        this.routing = new BasicRouting(this.app);
         this.setDefaultHeaders(this.app);
         this.setDefaultMetaData(this.app);
     }
@@ -19,10 +18,6 @@ export class HttpService {
         if (!this.httpService)
             this.httpService = new HttpService();
         return this.httpService;
-    }
-
-    private addRouting(app: express.Application) {
-        app.use(this.routing.getRouting());
     }
 
     setDefaultHeaders(app: express.Application) {
