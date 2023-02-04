@@ -4,7 +4,7 @@ import { HttpService } from './http-service';
 
 export class WsService {
     private httpService = HttpService.getInstance();
-    public static wsService: WsService;
+    private static wsService: WsService;
     private server = http.createServer();
     private wsServer!: ws.Server;
 

@@ -1,11 +1,16 @@
 import express from 'express';
+import { BasicRouting } from '../routing/basic-routing';
 
 
 export class HttpService {
     public app!: express.Application;
-    public static httpService: HttpService;
+    private static httpService: HttpService;
+    private routing: BasicRouting;
+
     private constructor() {
         this.app = express();
+        this.routing = new BasicRouting();
+        this.addRouting(this.app);
         this.setDefaultHeaders(this.app);
         this.setDefaultMetaData(this.app);
     }
@@ -14,6 +19,10 @@ export class HttpService {
         if (!this.httpService)
             this.httpService = new HttpService();
         return this.httpService;
+    }
+
+    private addRouting(app: express.Application) {
+        app.use(this.routing.getRouting());
     }
 
     setDefaultHeaders(app: express.Application) {
