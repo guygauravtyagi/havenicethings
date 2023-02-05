@@ -13,6 +13,7 @@ export class BasicRouting {
 
     setRouting() {
         this.app.get('/login', this.loginController.controll);
+        this.app.get('/signUp', this.loginController.controll);
     }
 
 }
